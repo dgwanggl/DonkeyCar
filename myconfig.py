@@ -38,15 +38,15 @@
 # DRIVE_TRAIN_TYPE = "SERVO_ESC" # SERVO_ESC|DC_STEER_THROTTLE|DC_TWO_WHEEL|SERVO_HBRIDGE_PWM
 # 
 # #STEERING
-STEERING_CHANNEL = 1            #channel on the 9685 pwm board 0-15
-STEERING_LEFT_PWM = 500         #pwm value for full left steering
-STEERING_RIGHT_PWM = 300        #pwm value for full right steering
+# STEERING_CHANNEL = 1            #channel on the 9685 pwm board 0-15
+STEERING_LEFT_PWM = 550         #pwm value for full left steering
+STEERING_RIGHT_PWM = 250        #pwm value for full right steering
 # 
 # #THROTTLE
-THROTTLE_CHANNEL = 0            #channel on the 9685 pwm board 0-15
-THROTTLE_FORWARD_PWM = 370      #pwm value for max forward throttle
-THROTTLE_STOPPED_PWM = 330      #pwm value for no movement
-THROTTLE_REVERSE_PWM = 308      #pwm value for max reverse throttle
+# THROTTLE_CHANNEL = 0            #channel on the 9685 pwm board 0-15
+THROTTLE_FORWARD_PWM = 420      #pwm value for max forward throttle
+THROTTLE_STOPPED_PWM = 370      #pwm value for no movement
+THROTTLE_REVERSE_PWM = 320      #pwm value for max reverse throttle
 # 
 # #DC_STEER_THROTTLE with one motor as steering, one as drive
 # #these GPIO pinouts are only used for the DRIVE_TRAIN_TYPE=DC_STEER_THROTTLE
@@ -67,7 +67,7 @@ THROTTLE_REVERSE_PWM = 308      #pwm value for max reverse throttle
 # #The DEFAULT_MODEL_TYPE will choose which model will be created at training time. This chooses
 # #between different neural network designs. You can override this setting by passing the command
 # #line parameter --type to the python manage.py train and drive commands.
-DEFAULT_MODEL_TYPE = 'categorical'   #(linear|categorical|rnn|imu|behavior|3d|localizer|latent)
+DEFAULT_MODEL_TYPE = 'rnn'   #(linear|categorical|rnn|imu|behavior|3d|localizer|latent)
 # BATCH_SIZE = 128                #how many records to use when doing one pass of gradient decent. Use a smaller number if your gpu is running out of memory.
 # TRAIN_TEST_SPLIT = 0.8          #what percent of records to use for training. the remaining used for validation.
 # MAX_EPOCHS = 100                #how many times to visit all records of your data
